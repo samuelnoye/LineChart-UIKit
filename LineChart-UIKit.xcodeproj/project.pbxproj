@@ -13,9 +13,13 @@
 		D569ECF5283B9AA700846E62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D569ECF3283B9AA700846E62 /* Main.storyboard */; };
 		D569ECF7283B9AA800846E62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D569ECF6283B9AA800846E62 /* Assets.xcassets */; };
 		D569ECFA283B9AA800846E62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D569ECF8283B9AA800846E62 /* LaunchScreen.storyboard */; };
+		F38EE7C5A74985C5FF4295EE /* Pods_LineChart_UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C991BBDA0425901484EFF63E /* Pods_LineChart_UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		29BE4BFE426F31FA6473FA8F /* Pods-LineChart-UIKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LineChart-UIKit.debug.xcconfig"; path = "Target Support Files/Pods-LineChart-UIKit/Pods-LineChart-UIKit.debug.xcconfig"; sourceTree = "<group>"; };
+		9C68521D513E593402E8AFF9 /* Pods-LineChart-UIKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LineChart-UIKit.release.xcconfig"; path = "Target Support Files/Pods-LineChart-UIKit/Pods-LineChart-UIKit.release.xcconfig"; sourceTree = "<group>"; };
+		C991BBDA0425901484EFF63E /* Pods_LineChart_UIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LineChart_UIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D569ECEA283B9AA700846E62 /* LineChart-UIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LineChart-UIKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D569ECED283B9AA700846E62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D569ECEF283B9AA700846E62 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F38EE7C5A74985C5FF4295EE /* Pods_LineChart_UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53F4F3D6A8509ED1B55D6A00 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				29BE4BFE426F31FA6473FA8F /* Pods-LineChart-UIKit.debug.xcconfig */,
+				9C68521D513E593402E8AFF9 /* Pods-LineChart-UIKit.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8DE127FE15A2AE27013BC316 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C991BBDA0425901484EFF63E /* Pods_LineChart_UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D569ECE1283B9AA700846E62 = {
 			isa = PBXGroup;
 			children = (
 				D569ECEC283B9AA700846E62 /* LineChart-UIKit */,
 				D569ECEB283B9AA700846E62 /* Products */,
+				53F4F3D6A8509ED1B55D6A00 /* Pods */,
+				8DE127FE15A2AE27013BC316 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D569ECFE283B9AA800846E62 /* Build configuration list for PBXNativeTarget "LineChart-UIKit" */;
 			buildPhases = (
+				B74283829D4AAF6DF7784027 /* [CP] Check Pods Manifest.lock */,
 				D569ECE6283B9AA700846E62 /* Sources */,
 				D569ECE7283B9AA700846E62 /* Frameworks */,
 				D569ECE8283B9AA700846E62 /* Resources */,
+				A09344681F318F4C2696FE67 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A09344681F318F4C2696FE67 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LineChart-UIKit/Pods-LineChart-UIKit-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LineChart-UIKit/Pods-LineChart-UIKit-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LineChart-UIKit/Pods-LineChart-UIKit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B74283829D4AAF6DF7784027 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LineChart-UIKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D569ECE6283B9AA700846E62 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		D569ECFF283B9AA800846E62 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29BE4BFE426F31FA6473FA8F /* Pods-LineChart-UIKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +380,7 @@
 		};
 		D569ED00283B9AA800846E62 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C68521D513E593402E8AFF9 /* Pods-LineChart-UIKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
