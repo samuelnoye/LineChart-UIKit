@@ -40,11 +40,7 @@ class ViewController: UIViewController, ChartViewDelegate {
         lineChartView.centerInSuperview()
         lineChartView.width(to: view)
         lineChartView.heightToWidth(of: view)
-        setData1()
         setData()
-        
-        
-        
     }
 
     func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
@@ -52,17 +48,17 @@ class ViewController: UIViewController, ChartViewDelegate {
     }
     
     func setData(){
-        
+        //Get optimal speed data
         var optimalValues = [ChartDataEntry]()
         for x in 0..<10 {
             optimalValues.append(ChartDataEntry(x: Double(x), y: Double(Int.random(in: 1...10))))
         }
-        
+        //Get actual speed data
         var actualValues = [ChartDataEntry]()
         for x in 0..<10 {
             actualValues.append(ChartDataEntry(x: Double(x), y: Double(Int.random(in: 1...10))))
         }
-        
+        //set data
         let optimalSet = LineChartDataSet(entries: optimalValues, label: nil)
         let actualSet = LineChartDataSet(entries: actualValues, label: nil)
         
@@ -77,31 +73,15 @@ class ViewController: UIViewController, ChartViewDelegate {
         actualSet.setColor(.black)
         actualSet.mode = .cubicBezier
     
-//        var dataSets : [LineChartDataSet] = [LineChartDataSet]()
-//        dataSets.append(actualSet)
-//        dataSets.append(actualSet)
+        //combine datasets to data
         let data = LineChartData(dataSets:[optimalSet,actualSet])
+        //data styling
         data.setDrawValues(false)
         
-        
+        //pass data to graph
         lineChartView.data = data
      
     }
-    func setData1(){
-        
-        var actualValues = [ChartDataEntry]()
-        for x in 0..<10 {
-            actualValues.append(ChartDataEntry(x: Double(x), y: Double(x)))
-        }
-        
-        let actualSet = LineChartDataSet(entries: actualValues, label: "Actual")
-        let actual = LineChartData(dataSet: actualSet)
-        lineChartView.data = actual
-        
-        
-    }
-    
-   
     
 //    let yValues: [ChartDataEntry] = [
 //        ChartDataEntry(x: 0.0, y: 5.0),
