@@ -64,12 +64,12 @@ class ViewController: UIViewController, ChartViewDelegate {
         
         //Optimal data line styling
         optimalSet.drawCirclesEnabled = false
-        optimalSet.lineWidth = 2
+        optimalSet.lineWidth = 1
         optimalSet.setColor(.white)
         optimalSet.mode = .cubicBezier
         //Actual data line styling
         actualSet.drawCirclesEnabled = false
-        actualSet.lineWidth = 2
+        actualSet.lineWidth = 1
         actualSet.setColor(.black)
         actualSet.mode = .cubicBezier
     
