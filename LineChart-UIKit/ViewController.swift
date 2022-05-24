@@ -58,17 +58,33 @@ class ViewController: UIViewController, ChartViewDelegate {
             optimalValues.append(ChartDataEntry(x: Double(x), y: Double(Int.random(in: 1...10))))
         }
         
-        let optimalSet = LineChartDataSet(entries: optimalValues, label: "Optimal")
+        var actualValues = [ChartDataEntry]()
+        for x in 0..<10 {
+            actualValues.append(ChartDataEntry(x: Double(x), y: Double(Int.random(in: 1...10))))
+        }
         
+        let optimalSet = LineChartDataSet(entries: optimalValues, label: nil)
+        let actualSet = LineChartDataSet(entries: actualValues, label: nil)
+        
+        //Optimal data line styling
         optimalSet.drawCirclesEnabled = false
         optimalSet.lineWidth = 2
         optimalSet.setColor(.white)
         optimalSet.mode = .cubicBezier
+        //Actual data line styling
+        actualSet.drawCirclesEnabled = false
+        actualSet.lineWidth = 2
+        actualSet.setColor(.black)
+        actualSet.mode = .cubicBezier
     
+//        var dataSets : [LineChartDataSet] = [LineChartDataSet]()
+//        dataSets.append(actualSet)
+//        dataSets.append(actualSet)
+        let data = LineChartData(dataSets:[optimalSet,actualSet])
+        data.setDrawValues(false)
         
-        let optimal = LineChartData(dataSet: optimalSet)
-        optimal.setDrawValues(false)
-        lineChartView.data = optimal
+        
+        lineChartView.data = data
      
     }
     func setData1(){
