@@ -33,7 +33,7 @@ class ViewController: UIViewController, ChartViewDelegate {
         let xAxis = chartView.xAxis
         xAxis.labelPosition = .bottom
         xAxis.labelFont = .boldSystemFont(ofSize: 12)
-        //xAxis.setLabelCount(10, force: false)
+        xAxis.setLabelCount(10, force: false)
         xAxis.labelTextColor = .white
         xAxis.axisLineColor = .white
         xAxis.granularity = 1
