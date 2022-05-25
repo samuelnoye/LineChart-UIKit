@@ -14,20 +14,34 @@ class ViewController: UIViewController, ChartViewDelegate {
     
     lazy var lineChartView: LineChartView = {
         let chartView = LineChartView()
+        chartView.isUserInteractionEnabled = false
+        chartView.setNeedsDisplay()
+        chartView.setScaleEnabled(true)
+        chartView.chartDescription?.enabled = true
+        chartView.legend.enabled = false
+        chartView.dragEnabled = false
         chartView.backgroundColor = .systemPink
         chartView.rightAxis.enabled = false
         let yAxis = chartView.leftAxis
         yAxis.labelFont = .boldSystemFont(ofSize: 12)
-        yAxis.setLabelCount(6, force: false)
+       //yAxis.setLabelCount(10, force: false)
+        yAxis.removeAllLimitLines()
+        yAxis.axisMinimum = 0
         yAxis.labelTextColor = .white
         yAxis.axisLineColor = .white
         yAxis.labelPosition = .outsideChart
         let xAxis = chartView.xAxis
         xAxis.labelPosition = .bottom
         xAxis.labelFont = .boldSystemFont(ofSize: 12)
-        xAxis.setLabelCount(6, force: false)
+        //xAxis.setLabelCount(10, force: false)
         xAxis.labelTextColor = .white
         xAxis.axisLineColor = .white
+        xAxis.granularity = 1
+        xAxis.granularityEnabled = true
+     
+        
+        
+        
         
         chartView.animate(xAxisDuration: 2.5)
         return chartView
@@ -37,6 +51,7 @@ class ViewController: UIViewController, ChartViewDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         view.addSubview(lineChartView)
+        lineChartView.delegate = self
         lineChartView.centerInSuperview()
         lineChartView.width(to: view)
         lineChartView.heightToWidth(of: view)
@@ -66,6 +81,7 @@ class ViewController: UIViewController, ChartViewDelegate {
         optimalSet.drawCirclesEnabled = false
         optimalSet.lineWidth = 1
         optimalSet.setColor(.white)
+      //  optimalSet.setColor(optimalSet <= actualSet ? .white : .red)
         optimalSet.mode = .cubicBezier
         //Actual data line styling
         actualSet.drawCirclesEnabled = false
