@@ -24,7 +24,7 @@ class ViewController: UIViewController, ChartViewDelegate {
         chartView.rightAxis.enabled = false
         let yAxis = chartView.leftAxis
         yAxis.labelFont = .boldSystemFont(ofSize: 12)
-       //yAxis.setLabelCount(10, force: false)
+       yAxis.setLabelCount(10, force: false)
         yAxis.removeAllLimitLines()
         yAxis.axisMinimum = 0
         yAxis.labelTextColor = .white
