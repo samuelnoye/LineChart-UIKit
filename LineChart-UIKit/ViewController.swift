@@ -64,10 +64,10 @@ class ViewController: UIViewController, ChartViewDelegate {
     
     func setData(){
         //Get optimal speed data
-//        var optimalValues = [ChartDataEntry]()
-//        for x in 0..<10 {
-//            optimalValues.append(ChartDataEntry(x: Double(x), y: Double(Int.random(in: 1...10))))
-//        }
+        var optimalValues = [ChartDataEntry]()
+        for x in 0..<10 {
+            optimalValues.append(ChartDataEntry(x: Double(x), y: Double(Int.random(in: 1...10))))
+        }
         //Get actual speed data
         var actualValues = [ChartDataEntry]()
         for x in 0..<10 {
