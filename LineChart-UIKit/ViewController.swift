@@ -48,14 +48,14 @@ class ViewController: UIViewController, ChartViewDelegate {
     }()
     
     override func viewDidLoad() {
-//        super.viewDidLoad()
-//        // Do any additional setup after loading the view.
-//        view.addSubview(lineChartView)
-//        lineChartView.delegate = self
-//        lineChartView.centerInSuperview()
-//        lineChartView.width(to: view)
-//        lineChartView.heightToWidth(of: view)
-//        setData()
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        view.addSubview(lineChartView)
+        lineChartView.delegate = self
+        lineChartView.centerInSuperview()
+        lineChartView.width(to: view)
+        lineChartView.heightToWidth(of: view)
+        setData()
     }
 
     func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
