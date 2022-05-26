@@ -101,7 +101,7 @@ class ViewController: UIViewController, ChartViewDelegate {
     
 //    let yValues: [ChartDataEntry] = [
 //        ChartDataEntry(x: 0.0, y: 5.0),
-        ChartDataEntry(x: 1.0, y: 5.5),
+//        ChartDataEntry(x: 1.0, y: 5.5),
 //        ChartDataEntry(x: 2.0, y: 8.0),
 //        ChartDataEntry(x: 3.0, y: 7.0),
 //        ChartDataEntry(x: 4.0, y: 6.0),
