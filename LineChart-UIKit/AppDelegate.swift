@@ -1,9 +1,9 @@
-
- AppDelegate.swift
- LineChart-UIKit
-
- Created by Samuel Noye on 23/05/2022.
-
+//
+//  AppDelegate.swift
+//  LineChart-UIKit
+//
+//  Created by Samuel Noye on 23/05/2022.
+//
 
 import UIKit
 
