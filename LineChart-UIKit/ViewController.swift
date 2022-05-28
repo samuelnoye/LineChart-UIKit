@@ -81,7 +81,7 @@ class ViewController: UIViewController, ChartViewDelegate {
         optimalSet.drawCirclesEnabled = false
         optimalSet.lineWidth = 1
         optimalSet.setColor(.white)
-      //  optimalSet.setColor(optimalSet <= actualSet ? .white : .red)
+      //optimalSet.setColor(optimalSet <= actualSet ? .white : .red)
         optimalSet.mode = .cubicBezier
         //Actual data line styling
         actualSet.drawCirclesEnabled = false
